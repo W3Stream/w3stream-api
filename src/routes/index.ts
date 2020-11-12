@@ -5,6 +5,8 @@ import * as swaggerUi from 'swagger-ui-express';
 import ProfileRouter from './ProfileRouter';
 import AuthRouter from './AuthRouter';
 import ChannelRouter from './ChannelRouter';
+import ProviderProfileRouter from './ProviderProfileRouter';
+
 
 
 let swaggerDoc: Object;
@@ -37,6 +39,8 @@ export function init(app: express.Application): void {
     app.use('/auth', AuthRouter);
 
     app.use('/channel', ChannelRouter);
+
+    app.use('/providerprofile', ProviderProfileRouter);
 
 
 
