@@ -1,10 +1,11 @@
 import * as express from 'express';
 import * as http from 'http';
-import * as passportConfig from '../config/middleware/passport';
 import * as swaggerUi from 'swagger-ui-express';
 
 import ProfileRouter from './ProfileRouter';
 import AuthRouter from './AuthRouter';
+import ChannelRouter from './ChannelRouter';
+
 
 let swaggerDoc: Object;
 
@@ -34,6 +35,9 @@ export function init(app: express.Application): void {
     app.use('/profile', ProfileRouter);
 
     app.use('/auth', AuthRouter);
+
+    app.use('/channel', ChannelRouter);
+
 
 
 
